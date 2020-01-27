@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-import Teste from './Teste';
+// import Teste from './Teste';
 import FormLogin from '../shared/forms/FormLogin'
 
 class Login extends Component {
     
-    constructor(props) {
+    // constructor(props) {
 
-        super(props);
+    //     super(props);
 
-        this.state = {  
-            // nome: 'Nome',
-            // email: 'E-mail'
-        }
-    }
+    //     this.state = {  
+    //         nome: 'Nome',
+    //         email: 'E-mail'
+    //     }
+    // }
 
     render() { 
 

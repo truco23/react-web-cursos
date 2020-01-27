@@ -7,7 +7,8 @@ class FormLogin extends Component {
         super(props);
 
         this.state = {
-            name: ''
+            name: '',
+            message: ''
         }
     }
 
@@ -17,6 +18,8 @@ class FormLogin extends Component {
 
         e.preventDefault();
 
+        if(!this.validate()) return;
+        this.validate();
         this.setLocalStorage(name);
         this.redirectPage();
     }
@@ -36,7 +39,20 @@ class FormLogin extends Component {
         this.props.props.history.push('/main');
     }
 
+    validate = () => {
+
+        const { name } = this.state;
+
+        if(!name) {
+            this.setState({ message: 'Campo obrigatório' });
+            return false;            
+        }
+        return true;
+    }
+
     render() {
+        const { message } = this.state;
+        
         return (
             <form className="container" onSubmit={this.handlerSubmit}>
                 <fieldset>
@@ -55,7 +71,7 @@ class FormLogin extends Component {
                         <small
                             id="nameHelp"
                             className="form-text text-muted">
-                            Nome obrigatório
+                            {message ? message : ''}
                         </small>
                     </div>
                 </fieldset>
