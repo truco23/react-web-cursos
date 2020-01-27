@@ -14,7 +14,7 @@ class Card extends Component {
                 <div className="card-body">
                     <h5 className="card-title">{title}</h5>
                     <p className="card-text">{description}</p>
-                    <a href={'/', url} className="btn btn-info btn-block">Ir para {title}</a>
+                    <a href={'/main/' + url} className="btn btn-info btn-block">Ir para {title}</a>
                 </div>
             </div>
         );

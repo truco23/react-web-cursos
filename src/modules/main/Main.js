@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from '../shared/card/Card';
+import Menu from '../shared/menu/Menu';
 
 class Main extends Component {
 
@@ -25,6 +26,7 @@ class Main extends Component {
     render() {
         return (
             <section className="container">
+                <Menu />
                 {
                     this.state.cards.map((card, indice) => (<Card key={indice} props={card} />))
                 }
