@@ -57,7 +57,6 @@ class FormLogin extends Component {
             <form className="container" onSubmit={this.handlerSubmit}>
                 <fieldset>
                     <div className="form-group text-left">
-                        <label htmlFor="name">Nome para login</label>
                         <input
                             type="text"
                             name="name"
@@ -70,7 +69,7 @@ class FormLogin extends Component {
 
                         <small
                             id="nameHelp"
-                            className="form-text text-muted">
+                            className="form-text text-danger">
                             {message ? message : ''}
                         </small>
                     </div>

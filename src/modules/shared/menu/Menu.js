@@ -16,7 +16,7 @@ class Menu extends Component {
     render() {
         return (
             <nav className="bg-dark d-flex justify-content-between p-2">
-                <a className="navbar-brand text-white" href="/main">
+                <a className="navbar-brand text-white" href="/">
                     <i className="fas fa-school"></i>
                 </a>
 
