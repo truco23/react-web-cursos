@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LocalStorage from '../../helpers/LocalStorage';
 
 class FormLogin extends Component {
 
@@ -8,7 +9,8 @@ class FormLogin extends Component {
 
         this.state = {
             name: '',
-            message: ''
+            message: '',
+            localStorage: new LocalStorage()
         }
     }
 
@@ -31,7 +33,7 @@ class FormLogin extends Component {
 
     setLocalStorage = name => {
 
-        window.localStorage.setItem('login:reactjs', name)
+        this.state.localStorage.set(name)
     }
 
     redirectPage = () => {
